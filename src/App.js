@@ -54,7 +54,7 @@ const App = () => {
 
   return (
     <>
-      <Router>
+      <Router basename='/newsapp'>
         <Helmet bodyAttributes={bodyStyle} />
         <Navbar handleMode={handleMode} btnText={btnText} mode={mode} text={text} />
         <LoadingBar
@@ -62,7 +62,7 @@ const App = () => {
           progress={progress}
         />
         <Routes>
-          <Route exact path="/" element={<News apikey={apikey} setProgress={setProgress} key="general" country="in" category="general" style={style} text={text} />}></Route>
+          <Route exact path="/newsapp" element={<News apikey={apikey} setProgress={setProgress} key="general" country="in" category="general" style={style} text={text} />}></Route>
           <Route exact path="/business" element={<News apikey={apikey} setProgress={setProgress} key="business" country="in" category="business" style={style} text={text} />}></Route>
           <Route exact path="/entertainment" element={<News apikey={apikey} setProgress={setProgress} key="entertainment" country="in" category="entertainment" style={style} text={text} />}></Route>
           <Route exact path="/health" element={<News apikey={apikey} setProgress={setProgress} key="health" country="in" category="health" style={style} text={text} />}></Route>
